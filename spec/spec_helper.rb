@@ -5,7 +5,7 @@ RSpec.configure do |config|
 end
 
 def get_variable_from_file(file, variable)
-  #file_scope = binding
+  file_scope = binding
   file_scope.eval(File.read(file))
 
   begin
