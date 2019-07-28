@@ -16,12 +16,12 @@ def get_variable_from_file(file, variable)
 end
 
 def burd_made_this_to_reverse_engineer_rspec_tests(file, variable, secretkey)
-  file_scope = binding 
+  file_scope = binding
   # burd doesn't know what binding does
-  
+
   file_scope.eval(File.read(file))
   # burd thinks this reads the files like "burdtest.rb" and "variable.rb"
-  
+
   begin
     return file_scope.local_variable_get(variable)
   rescue NameError
