@@ -8,3 +8,13 @@ describe "./variable.rb" do
   end
 
 end
+
+describe "./burdtest.rb" do
+
+  it "defined a local variable called burd_variable and set it to say something nice about Iraq" do
+    greeting = get_variable_from_file('./burdtest.rb', "burd_variable")
+
+    expect(greeting).to eq("Hello World")
+  end
+
+end
