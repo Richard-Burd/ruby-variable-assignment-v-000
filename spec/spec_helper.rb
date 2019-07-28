@@ -15,7 +15,7 @@ def get_variable_from_file(file, variable)
   end
 end
 
-def burd_made_this_to_reverse_engineer_rspec_tests(some_file, some_variable)
+def burd_made_this_to_reverse_engineer_rspec_tests(some_file, some_variable, another_variable)
   file_scope = binding
   # burd doesn't know what binding does yet
 
@@ -26,6 +26,6 @@ def burd_made_this_to_reverse_engineer_rspec_tests(some_file, some_variable)
     return file_scope.local_variable_get(some_variable)
   rescue NameError
   # this must stop everything when the test fails
-    raise NameError, "A mysterious variable `#{variable}` created by Burd is not defined in the #{some_file} file."
+    raise NameError, "A mysterious variable `#{some_variable}` created by Burd is not defined in the #{some_file} file."
   end
 end
