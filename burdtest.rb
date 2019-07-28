@@ -1,1 +1,1 @@
-burd_variable = "make an additional rspec test pass"
+burd_variable = "Duhok is a fine city"
